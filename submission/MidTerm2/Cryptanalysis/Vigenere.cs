@@ -15,26 +15,52 @@ namespace Cryptanalysis
         {
             string rep = "";
             int[] ind = new int[msg.Length];
+            int keyind = 0;
             for (int i = 0; i < msg.Length; i++)
             {
-                int index = Tools.LetterIndex(msg[i]);
-                if (index != -1)
+                int index = Tools.LetterIndex(key[keyind]);
+                if (index != -1 && Tools.LetterIndex(msg[i]) != -1)
                 {
                     ind[i] = index;
+                    keyind += 1;
+                }
+                
+                rep += Tools.RotChar(msg[i], ind[i]);
+                
+                if (keyind == key.Length)
+                {
+                    keyind = 0;
                 }
             }
-
-            for (int i = 0; i < ind.Length; i++)
-            {
-                rep += Tools.RotChar(msg[i], ind[i]);
-            }
+            
 
             return rep;
         }
 
         public string Decrypt(string cypherText)
         {
-            throw new NotImplementedException();
+            string rep = "";
+            int[] ind = new int[cypherText.Length];
+            int keyind = 0;
+            for (int i = 0; i < cypherText.Length; i++)
+            {
+                int index = Tools.LetterIndex(key[keyind]);
+                if (index != -1 && Tools.LetterIndex(cypherText[i]) != -1)
+                {
+                    ind[i] = index;
+                    keyind += 1;
+                }
+                
+                rep += Tools.RotChar(cypherText[i], -ind[i]);
+                
+                if (keyind == key.Length)
+                {
+                    keyind = 0;
+                }
+            }
+            
+
+            return rep;
         }
 
         public static string GuessKeyWithLength(string cypherText, int keyLength)
