@@ -30,7 +30,7 @@ public static class Tools
             return -1;
         }
     }
-    
+
     public static char RotChar(char c, int n)
     {
         int tmp = c;
@@ -61,7 +61,17 @@ public static class Tools
 
     public static int[] Histogram(string str)
     {
-        throw new NotImplementedException();
+        int[] res = new int[26];
+        for (int i = 0; i < str.Length; i++)
+        {
+            int chpos = LetterIndex(str[i]);
+            if (chpos != -1)
+            {
+                res[chpos] += 1;
+            }
+        }
+
+        return res;
     }
     
     public static string FilterLetters(string str)

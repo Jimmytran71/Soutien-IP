@@ -7,8 +7,8 @@ internal static class Program
     private static void Main()
     {
         // Put your tests here.
-        Caesar k = new Caesar(3);
-        Console.WriteLine(k.Decrypt("Pb hadp lv vr lqwhuhvwlqj! Wkdqnv DFGF <3") );
+        string a = "Aa c";
+        Tools.testarray(a);
         Test();
     }
 
