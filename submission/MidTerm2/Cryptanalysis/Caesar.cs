@@ -37,7 +37,17 @@ namespace Cryptanalysis
     
         public static int GuessKey(string cypherText)
         {
-            throw new NotImplementedException();
+            int[] histo = Tools.Histogram(cypherText);
+            int res = 0;
+            for (int i = 0; i < histo.Length-1; i++)
+            {
+                if (histo[i] < histo[i+1])
+                {
+                    res = histo[i+1];
+                }
+            }
+
+            return res - histo[4];
         }
     }
 }

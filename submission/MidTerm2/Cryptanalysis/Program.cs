@@ -7,7 +7,7 @@ internal static class Program
     private static void Main()
     {
         // Put your tests here.
-
+        
         Test();
     }
 

@@ -76,12 +76,28 @@ namespace Cryptanalysis
     
         public static string FilterLetters(string str)
         {
-            throw new NotImplementedException();
+            string res = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (LetterIndex(str[i]) != -1)
+                {
+                    res += str[i];
+                }
+            }
+
+            return res;
         }
 
         public static string Extract(string str, int start, int step)
         {
-            throw new NotImplementedException();
+            string res = "";
+            for (int i = start; i < str.Length; i += step)
+            {
+                res += str[i];
+            }
+
+            return res;
         }
+        
     }
 }
