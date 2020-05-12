@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 
 namespace Cryptanalysis
 {
@@ -7,8 +7,8 @@ internal static class Program
     private static void Main()
     {
         // Put your tests here.
-        
-        Test();
+
+        //Test();
     }
 
     private static void Test()

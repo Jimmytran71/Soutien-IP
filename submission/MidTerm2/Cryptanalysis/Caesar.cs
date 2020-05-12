@@ -2,42 +2,42 @@ using System;
 
 namespace Cryptanalysis
 {
-public class Caesar
-{
-    private int key;
-
-    public int Key => key;
-
-    public Caesar(int key)
+    public class Caesar
     {
-        this.key = key;
-    }
+        private int key;
 
-    public string Encrypt(string msg)
-    {
-        string res = "";
-        for (int i = 0; i < msg.Length; i++)
+        public int Key => key;
+
+        public Caesar(int key)
         {
-            res += Tools.RotChar(msg[i], key);
+            this.key = key;
         }
 
-        return res;
-    }
-
-    public string Decrypt(string cypherText)
-    {
-        string res = "";
-        for (int i = 0; i < cypherText.Length; i++)
+        public string Encrypt(string msg)
         {
-            res += Tools.RotChar(cypherText[i], - key);
+            string res = "";
+            for (int i = 0; i < msg.Length; i++)
+            {
+                res += Tools.RotChar(msg[i], key);
+            }
+
+            return res;
         }
 
-        return res;
-    }
+        public string Decrypt(string cypherText)
+        {
+            string res = "";
+            for (int i = 0; i < cypherText.Length; i++)
+            {
+                res += Tools.RotChar(cypherText[i], - key);
+            }
+
+            return res;
+        }
     
-    public static int GuessKey(string cypherText)
-    {
-        throw new NotImplementedException();
+        public static int GuessKey(string cypherText)
+        {
+            throw new NotImplementedException();
+        }
     }
-}
 }
