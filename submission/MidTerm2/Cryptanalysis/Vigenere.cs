@@ -70,7 +70,14 @@ namespace Cryptanalysis
     
         public static float IndexOfCoincidence(string str)
         {
-            throw new NotImplementedException();
+            float res = 0;
+            int[] histo = Tools.Histogram(str);
+            for (int i = 0; i < histo.Length; i++)
+            {
+                res += (histo[i] * (histo[i] - 1)) / str.Length * (str.Length - 1);
+            }
+
+            return res;
         }
 
         public static int GuessKeyLength(string cypherText)

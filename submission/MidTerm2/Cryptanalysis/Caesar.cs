@@ -47,7 +47,7 @@ namespace Cryptanalysis
                 }
             }
 
-            return res - histo[4];
+            return res - histo[4] - 1;
         }
     }
 }

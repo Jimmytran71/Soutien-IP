@@ -19,10 +19,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Cryptanalysis/Vigenere.cs" />
         <option value="$PROJECT_DIR$/Cryptanalysis/Tools.cs" />
-        <option value="$PROJECT_DIR$/Cryptanalysis/Caesar.cs" />
         <option value="$PROJECT_DIR$/Cryptanalysis/Program.cs" />
+        <option value="$PROJECT_DIR$/Cryptanalysis/Vigenere.cs" />
+        <option value="$PROJECT_DIR$/Cryptanalysis/Caesar.cs" />
       </list>
     </option>
   </component>
@@ -80,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589275155654</updated>
-      <workItem from="1589275157062" duration="4265000" />
+      <workItem from="1589275157062" duration="4958000" />
     </task>
     <servers />
   </component>
