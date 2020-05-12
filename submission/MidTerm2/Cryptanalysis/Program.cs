@@ -7,8 +7,7 @@ internal static class Program
     private static void Main()
     {
         // Put your tests here.
-        string a = "Aa c";
-        Tools.testarray(a);
+        
         Test();
     }
 
